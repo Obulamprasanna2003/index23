@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    h3{
+        text-shadow: 1px 2px 4px yellow,1px 2px 5px red;
+        color: aliceblue;
+        padding-top: 20px;
+    }
+        button{
+            margin-top: 100px; cursor: pointer; background-color: aqua;
+            border-radius: 20px;
+        
+        }
+        button:hover{
+            background-color: rgb(246, 5, 85);
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h3>RAINBOW COLORS DISPLAY BY CLICK ME BUTTON</h3>
+    <button>Click Me!</button>
+</center>
+<script>
+    const button=document.querySelector("button");
+    const body=document.querySelector("body");
+    const color=['violet','indigo','blue','green','yellow','orange','red'];
+
+    body.style.backgroundColor='pink';
+
+    document.addEventListener('click',changecolor);
+
+    function changecolor(){
+        const colorIndex=parseInt(Math.random()*color.length);
+        body.style.backgroundColor=color[colorIndex];
+    }
+</script>
+</body>
+</html>
